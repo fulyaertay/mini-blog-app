@@ -16,7 +16,7 @@
         <img src="img/logo.png" style="width: 50px; margin-top:10px; height: auto;"/>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="logged-in">
-                <a href="#" data-target="modal-account" class=" modal-trigger" data-target="modal-create">
+                <a href="#" data-target="modal-create" class=" modal-trigger" data-target="modal-create">
                 Create a New Blog
                 </a>
             </li>
@@ -37,11 +37,77 @@
             </li>
             <li class="logged-out">
                 <a href="#" class=" modal-trigger" data-target="modal-signup">
-                Create an Account
+                Create Account
             </a>
             </li>
         </ul>
       </div>
     </nav>
+
+    <!--Create an Account Modal-->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Create Account</h4>
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required />
+                    <label for="signup-password">Password</label>
+                </div>
+                <button class="btn blue-grey darken-4">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Log In Modal-->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Sign In</h4>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Password</label>
+                </div>
+                <button class="btn blue-grey darken-4">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Account Modal-->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account Details</h4>
+            <div class="account-details"></div>
+        </div>
+    </div>
+
+    <!--Create Blog Modal-->
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Create Blog</h4>
+            <form id="create-form">
+                <div class="input-field">
+                    <input type="text" id="title" required />
+                    <label for="title">Blog Title</label>
+                </div>
+                <div class="input-field">
+                    <textarea type="text" id="content" class="materialize-textarea" required></textarea>
+                    <label for="content">Blog Content</label>
+                </div>
+                <button class="btn blue-grey darken-4">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="./scripts/script.js"></script>
 </body>
 </html>
