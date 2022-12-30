@@ -11,4 +11,14 @@ accountForm.addEventListener('submit',(e)=>{
         accountForm.reset();
 
     });
+});
+
+
+//logout
+const logout=document.querySelector('#logout');
+logout.addEventListener('click',(e)=>{
+    e.preventDefault();
+    auth.signOut().then(()=>{
+        console.log('Logout successful');
+    })
 })
