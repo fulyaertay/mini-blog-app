@@ -8,7 +8,7 @@ auth.onAuthStateChanged(k=>{
     }else{
         //console.log("hata");
         getBlog([]);
-        getUser([]);
+        getUser();
     }
 
 })
