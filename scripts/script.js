@@ -41,7 +41,7 @@ const getBlog=(data)=>{
         blogs.innerHTML=html;
     });
    }else{
-    blogs.innerHTML='<h5 class="center-align">Please Sign In</h5>'
+    blogs.innerHTML='<div><img src="./img/background.jpg"/></div><h5 class="center-align">Please Sign In to See Blogs!</h5>'
    }
 
    
