@@ -1,4 +1,20 @@
 const blogs=document.querySelector('.guides');
+const logoutLinks=document.querySelectorAll('.logged-out');
+const loginLinks=document.querySelectorAll('.logged-in');
+
+const getUser=(user)=>{
+    if(user){
+        loginLinks.forEach(item=>item.style.display='block');
+        logoutLinks.forEach(item=>item.style.display='none');
+
+    }else{
+        loginLinks.forEach(item=>item.style.display='none');
+        logoutLinks.forEach(item=>item.style.display='block');
+    }
+}
+
+
+//list blogs on index.html
 const getBlog=(data)=>{
    if(data.length){
     let html='';

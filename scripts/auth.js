@@ -3,11 +3,12 @@ auth.onAuthStateChanged(k=>{
     if(k){
         db.collection('blogs').get().then(snapshot=>{
             getBlog(snapshot.docs);
+            getUser(k);
         });
     }else{
         //console.log("hata");
         getBlog([]);
-
+        getUser([]);
     }
 
 })
