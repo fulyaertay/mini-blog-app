@@ -1,3 +1,15 @@
+//watching auth status
+auth.onAuthStateChanged(k=>{
+    if(k){
+        db.collection('blogs').get().then(snapshot=>{
+            getBlog(snapshot.docs);
+        })
+    }else{
+
+    }
+
+})
+
 //create account
 const accountForm=document.querySelector('#signup-form');
 accountForm.addEventListener('submit',(e)=>{
