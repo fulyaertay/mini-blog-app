@@ -45,3 +45,4 @@
 - Materialize CSS
 - Firebase Features(FireStore and Authentication)
 ```
+## Note: You can use your own Firebase API creating a new project on [https://firebase.google.com/]
