@@ -1,5 +1,6 @@
 const blogs=document.querySelector('.guides');
 const getBlog=(data)=>{
+   if(data.length){
     let html='';
     data.forEach(doc=>{
         const blog=doc.data();
@@ -13,6 +14,10 @@ const getBlog=(data)=>{
         html+=li;
         blogs.innerHTML=html;
     });
+   }else{
+    blogs.innerHTML='<h5 class="center-align">Please Sign In</h5>'
+   }
+
    
 }
 

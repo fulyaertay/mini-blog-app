@@ -5,7 +5,8 @@ auth.onAuthStateChanged(k=>{
             getBlog(snapshot.docs);
         });
     }else{
-        console.log("hata");
+        //console.log("hata");
+        getBlog([]);
 
     }
 
