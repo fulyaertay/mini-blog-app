@@ -1,7 +1,7 @@
 //watching auth status
 auth.onAuthStateChanged(k=>{
     if(k){
-        db.collection('blogs').get().then(snapshot=>{
+        db.collection('blogs').onSnapshot(snapshot=>{
             getBlog(snapshot.docs);
             getUser(k);
         });
@@ -28,7 +28,22 @@ accountForm.addEventListener('submit',(e)=>{
     });
 });
 
+//create blog
 
+const createBlogForm=document.querySelector('#create-form');
+createBlogForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    db.collection('blogs').add({
+        title:createBlogForm['title'].value,
+        content:createBlogForm['content'].value
+    }).then(()=>{
+        const modal=document.querySelector('#modal-create');
+        M.Modal.getInstance(modal).close();
+        createBlogForm.reset();
+    }).catch(err=>{
+        console.log(err.message);
+    })
+})
 //logout
 const logout=document.querySelector('#logout');
 logout.addEventListener('click',(e)=>{
