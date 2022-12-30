@@ -21,9 +21,14 @@ accountForm.addEventListener('submit',(e)=>{
     const password=accountForm['signup-password'].value;
 
     auth.createUserWithEmailAndPassword(mail,password).then(result=>{
-        const modal=document.querySelector('#modal-signup');
-        M.Modal.getInstance(modal).close();
-        accountForm.reset();
+        return db.collection('users').doc(result.user.uid).set({
+            bio:accountForm['signup-bio'].value
+        }).then(()=>{
+            const modal=document.querySelector('#modal-signup');
+            M.Modal.getInstance(modal).close();
+            accountForm.reset();
+        })
+
 
     });
 });

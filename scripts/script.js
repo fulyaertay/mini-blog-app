@@ -1,13 +1,23 @@
 const blogs=document.querySelector('.guides');
 const logoutLinks=document.querySelectorAll('.logged-out');
 const loginLinks=document.querySelectorAll('.logged-in');
-
+const accountDetails=document.querySelector('.account-details');
 const getUser=(user)=>{
     if(user){
+        db.collection('users').doc(user.uid).get().then(doc=>{
+            let html=`
+            <div>User E-mail: <strong>${user.email}</strong></div>
+            <div>${doc.data().bio}</div>
+        `;
+        accountDetails.innerHTML=html;
+        });
+      
+
         loginLinks.forEach(item=>item.style.display='block');
         logoutLinks.forEach(item=>item.style.display='none');
 
     }else{
+        accountDetails.innerHTML='';
         loginLinks.forEach(item=>item.style.display='none');
         logoutLinks.forEach(item=>item.style.display='block');
     }
