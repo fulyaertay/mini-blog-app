@@ -2,6 +2,8 @@
 
 ## Project: Mini Blog App
 
+## Check The Live Website :arrow_right: [Live Website](https://mini-blog-website.netlify.app/)
+
 ## Animation of the App
 
 - ![image](./blog-app.gif)
