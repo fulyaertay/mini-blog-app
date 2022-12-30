@@ -2,6 +2,9 @@
 
 ## Project: Mini Blog App
 
+## Animation of the App
+
+- ![image](./blog-app.gif)
 
 ## Visulation of the App
 
