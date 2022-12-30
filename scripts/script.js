@@ -11,8 +11,9 @@ const getBlog=(data)=>{
       </li>
         `;
         html+=li;
+        blogs.innerHTML=html;
     });
-    blogs.innerHTML(html);
+   
 }
 
 /* when DOM loaded, init all modals */
