@@ -3,8 +3,9 @@ auth.onAuthStateChanged(k=>{
     if(k){
         db.collection('blogs').get().then(snapshot=>{
             getBlog(snapshot.docs);
-        })
+        });
     }else{
+        console.log("hata");
 
     }
 
