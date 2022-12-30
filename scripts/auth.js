@@ -21,4 +21,20 @@ logout.addEventListener('click',(e)=>{
     auth.signOut().then(()=>{
         console.log('Logout successful');
     })
+});
+
+//login
+const loginForm=document.querySelector('#login-form');
+loginForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    console.log('login successful');
+    const mail=loginForm['login-email'].value;
+    const password=loginForm['login-password'].value;
+
+    auth.signInWithEmailAndPassword(mail,password).then((result)=>{
+        const modal=document.querySelector('#modal-login');
+        M.Modal.getInstance(modal).close();
+        loginForm.reset();
+    })
+
 })
