@@ -20,7 +20,7 @@
 
 
 ## Created Blog Screen
-- ![image](./logged-in.png)
+- ![image](./created-blog.png)
 
 
 ## Description
